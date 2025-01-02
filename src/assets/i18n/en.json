@@ -1,0 +1,59 @@
+{
+    "footer":{
+        "slogan":"We are a well-established legal firm, offering a wide range of specialized legal services. Our team of experienced and competent lawyers seeks to build long-term relationships with our clients through trust and transparency. Our goal is to be the best law firm."
+        ,"discoverOurWorld":"Discover our world"
+,"home":"Home",
+"who":"Who",
+"whyChooseUs":"Why choose us",
+"news":"blogs"
+,"ourServices":"Our Services",
+"Contact":"Communication and inquiries"
+,"askForAdvice":"Ask for advice",
+"location":"Our Location"
+,"copyRight":"Ramadan Al Hantoshi for Law and Legal Consultations 2024 © All rights reserved"
+    },
+    "blogs":{
+        "latestArticles":"Latest articles",
+        "blogs":"blogs"
+    },
+    "blogDetails":{
+        "title":"Legal steps to establish a new company in the Kingdom ",
+        "latestArticles":"Latest articles"
+
+    },
+    "contactUs":{
+        "validEmail":"please enter valid email",
+        "required":"please fill out this field ",
+        "minLength":"min length is 3 characters",
+        "maxLength":" max length is 25 characters ",
+        "send":"Send",
+        "titlePlaceholder":"We are here to serve you. Send a message now. ",
+        "title":"Message",
+        "phone":"Phone Number ",
+        "name":"Name",
+        "contactUs":"Contact us",
+        "contactDesc":" We are here to help you navigate your legal needs with confidence. Whether you have questions about our services, need assistance, or would like to share feedback, please feel free to reach out."
+        ,"email":" Email"
+        ,"callUs":"Call Us",
+        "stayCall":"Stay up to date with the latest news and insights from our team by following us on social media. ",
+        "haveQuestions":" Do you have any questions about our services?"
+,"FAQs":"Visit our FAQs below for quick and accurate answers. If you need further assistance, we are always happy to reach out to you!"
+    },"consultation":{
+        "serviceType":"Service type ",
+        "bookConsultation":"Book Consultation"
+        ,"consultation":"consultation",
+"getAdvice":" Get legal advice",
+"getAdviceDesc":"Do you have a legal question that concerns you? Do not hesitate to contact us for a specialized consultation that meets your needs. We are here to provide you with the necessary support and expertise, while providing a friendly environment that allows you to freely ask your questions. Our team of professional lawyers is ready to assist you in all aspects of the law. Contact us today!"
+,"legalConsultations":"Legal consultations"   
+   ,"criminalCase":"Criminal case"
+   ,"laborLawsuits":"Labor lawsuits "
+   ,"legalRepresentation":"Legal representation"
+   ,"civilSuits":" Civil suits",
+"alternativeDisputeResolution":" Alternative Dispute Resolution"
+,"commercialLawsuits":"Commercial lawsuits",
+"bankingLawsuits":"Banking lawsuits"
+},
+"faq":{
+    "faq":"Frequently asked questions "
+}
+}

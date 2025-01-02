@@ -1,0 +1,18 @@
+.square{
+    width: 40px;
+height: 40px;
+padding: 8px;
+    border-radius: 4px;
+border: 1px solid var(--Colors-Primary-primary-500, #036);
+}
+
+li{
+    font-size:var(--font-size-xs);
+}
+h5{
+    font-size:var(--font-size-sm);
+}
+.footer-container{
+    border-top: 1px solid #EFEFEF;
+
+}

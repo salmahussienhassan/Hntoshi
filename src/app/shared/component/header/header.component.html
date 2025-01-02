@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light position-absoulate">
+    <div class="container-fluid">
+      <div class="container container-wd">
+        <div class="header-container my-4">
+          <a class="navbar-brand" href="/">
+            <img class="logo" src="../../../../assets/img/header/logo.svg" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav m-auto my-2 gap-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">{{'footer.home' | translate}}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#who">{{'footer.who' | translate}}</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#service">{{'footer.ourServices' | translate}}</a>
+              </li>
+             
+              <li  [routerLink]="['/blogs']" class="nav-item">
+                <a class="nav-link disabled" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">{{'blogs.blogs' | translate}}</a>
+              </li>
+
+              <li [routerLink]="['/contact-us']" class="nav-item">
+                <a class="nav-link disabled"  tabindex="-1" aria-disabled="true">{{'home.contactUs' | translate}}</a>
+              </li>
+            </ul>
+            <div class="d-flex" (click)="changeLanguage(langText)">
+              <button class="btn primary-500" type="button">
+                {{'header.en' | translate}}</button>
+                <svg class="lang-icon mt-2" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1159_7006)">
+                  <path d="M12 0.59082C9.62663 0.59082 7.30655 1.29461 5.33316 2.61319C3.35977 3.93176 1.8217 5.80591 0.913451 7.99862C0.00519943 10.1913 -0.232441 12.6041 0.230582 14.9319C0.693605 17.2597 1.83649 19.3979 3.51472 21.0761C5.19295 22.7543 7.33115 23.8972 9.65892 24.3602C11.9867 24.8233 14.3995 24.5856 16.5922 23.6774C18.7849 22.7691 20.6591 21.2311 21.9776 19.2577C23.2962 17.2843 24 14.9642 24 12.5908C23.9966 9.40928 22.7312 6.35903 20.4815 4.10934C18.2318 1.85965 15.1815 0.594261 12 0.59082V0.59082ZM20.647 7.59082H17.426C16.705 5.91981 15.7556 4.35691 14.605 2.94682C17.1515 3.63975 19.3223 5.30829 20.647 7.59082ZM16.5 12.5908C16.4918 13.609 16.3314 14.6201 16.024 15.5908H7.97601C7.66866 14.6201 7.50821 13.609 7.50001 12.5908C7.50821 11.5727 7.66866 10.5615 7.97601 9.59082H16.024C16.3314 10.5615 16.4918 11.5727 16.5 12.5908ZM8.77801 17.5908H15.222C14.3732 19.2666 13.2882 20.8117 12 22.1788C10.7114 20.812 9.62625 19.2669 8.77801 17.5908ZM8.77801 7.59082C9.62677 5.91509 10.7119 4.36998 12 3.00282C13.2886 4.36959 14.3738 5.91478 15.222 7.59082H8.77801ZM9.40001 2.94682C8.24767 4.3566 7.29659 5.91952 6.57401 7.59082H3.35301C4.67886 5.30725 6.85166 3.63857 9.40001 2.94682ZM2.46101 9.59082H5.90001C5.64076 10.57 5.50636 11.578 5.50001 12.5908C5.50636 13.6037 5.64076 14.6117 5.90001 15.5908H2.46101C1.84635 13.638 1.84635 11.5436 2.46101 9.59082ZM3.35301 17.5908H6.57401C7.29659 19.2621 8.24767 20.825 9.40001 22.2348C6.85166 21.5431 4.67886 19.8744 3.35301 17.5908ZM14.605 22.2348C15.7556 20.8247 16.705 19.2618 17.426 17.5908H20.647C19.3223 19.8734 17.1515 21.5419 14.605 22.2348ZM21.539 15.5908H18.1C18.3592 14.6117 18.4936 13.6037 18.5 12.5908C18.4936 11.578 18.3592 10.57 18.1 9.59082H21.537C22.1517 11.5436 22.1517 13.638 21.537 15.5908H21.539Z" fill="#003366"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_1159_7006">
+                  <rect width="24" height="24" fill="white" transform="translate(0 0.59082)"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,62 @@
+.accordion-item{
+    border-radius: 10px;
+border: 1px solid  #D6D6D6;
+background:  #FAFAFA;
+}
+.accordion {
+    --bs-accordion-btn-icon: url('../../../../assets/img/contact-us/add.svg');
+    --bs-accordion-btn-active-icon: url('../../../../assets/img/contact-us/minus.svg');
+    --bs-accordion-active-bg: none;
+    --bs-accordion-transition: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-bg:none;
+    --bs-accordion-border-width: 0px;
+    
+}
+.accordion-button {
+    /* color: #8B929A; */
+}
+
+.accordion-button {
+    font-size:var(--font-size-normal) !important;
+    color: #8B929A;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--primary-500);
+}
+.accordion-item{
+    transition:all 1s ease;
+}
+.accordion-item:hover{
+    border-radius: 10px;
+    border: 1px solid #8AA1B9;
+    background: #FAFAFA;
+    box-shadow: 0px 0px 40px 0px rgba(0, 21, 43, 0.08);
+}
+
+@media only screen and (max-width: 768px) {
+    .w-75 , .w-50{
+        width:100% !important;
+    }
+}
+
+h2{
+    font-size:var(--font-size-llg);
+}
+.faq-header{
+    background-image:url('../../../../assets/img/faq/image 6 (3).png');
+    background-position:center;
+    background-size:cover;
+    height:55vh;
+}
+.faq-main{
+    /* background-image:url('../../../../assets/img/faq/Frame 1410103907.png');
+background-repeat:no-repeat;
+background-position:110% 150%; */
+    overflow:hidden;
+}
+.vector{
+    width:15%;
+    top:80%;
+    right:5%;
+}

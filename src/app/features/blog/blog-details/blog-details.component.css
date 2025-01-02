@@ -1,0 +1,22 @@
+.blog-header{
+    background-image:url('../../../../assets/img/blog-details/bg-blog-details.png');
+    background-position:center;
+    background-size:cover;
+    height:55vh;
+}
+.blog-header ul{
+    font-size:var( --font-size-md);
+    
+    }
+h2{
+    font-size:var(--font-size-xl);
+}
+p{
+    font-size:var(--font-size-normal);
+    width:85%;
+}
+@media only screen and (max-width: 600px) {
+    p{
+        width:100%;
+    }
+}

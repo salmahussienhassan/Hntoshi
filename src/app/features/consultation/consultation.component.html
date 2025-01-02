@@ -1,0 +1,136 @@
+<section class="consultation-header pt-5">
+    <div class="d-flex flex-column justify-content-center pt-5 align-items-center h-100 gap-2">
+        <nav class="pt-3">
+            <ul class="list-unstyled d-flex gap-2  px-0">
+              <li><a  class="gray-600 text-decoration-none" routerLink="/home"  >{{'footer.home'|translate }}</a></li>
+              <li><img src="../../../assets/img/blogs/arrow-left.svg" alt=""></li>
+              <li class=" text-white">{{'consultation.consultation'|translate }}</li>
+            </ul>
+          </nav>
+          <h1 class="text-white fw-semibold">{{'consultation.bookConsultation'|translate}}</h1>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row gy-3  my-5">
+            <div class="col-md-7">
+                <h2 class="primary-500 fw-semibold">{{'consultation.getAdvice'|translate}}</h2>
+                <p class="txt-400  ">{{'consultation.getAdviceDesc'|translate}} </p>
+
+                    <div class="row gy-3">
+                      <div *ngFor="let item of items; let i = index" class="col-md-4">
+                        <div class="d-flex flex-column gap-4">
+                          <div class="d-flex align-items-center gap-3" *ngFor="let icon of item.icons">
+                            <div class="square">
+                              <img class="img-fluid" [src]="icon.src" alt="">
+                            </div>
+                            <h6 class="mb-1 txt-400 fw-semibold">{{icon.text | translate}}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                  
+
+<div class="line-border mt-4"></div>
+
+<p  class="txt-400 my-3 ">{{'contactUs.stayCall'|translate}}</p>
+<div class="d-flex justify-content-center align-items-center gap-4 mt-4">
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/instagram logo.svg" alt="">
+            
+    </a>
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/linkedin logo.svg" alt=""> 
+    </a>
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/Twitter logo.svg" alt="">
+    </a>
+    <a href=""> 
+        <img  class="img-fluid" src="../../../assets/img/contact-us/facebook logo.svg" alt="">
+
+    </a>
+</div>
+            </div>
+            <div class="col-md-5">
+                <form [formGroup]="consultationForm"  class="bg-white py-5 px-2 d-flex align-items-center gap-4 flex-column">
+<img class="w-50" src="../../../assets/img/contact-us/Group (11).svg" alt="">
+<div class=" row gy-4 px-0 w-100">
+  <div class=" col-md-6">
+    <input maxlength="25"  formControlName="name" appNoNumbers class="form-control " type="text" placeholder="{{'contactUs.name'|translate}}">
+ 
+    <div *ngIf="submitted && consultationForm.controls['name'].errors || consultationForm.get('name')?.touched">
+      <span *ngIf="consultationForm.get('name')?.getError('required')  "
+        class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+    </div>
+    <p *ngIf="consultationForm.get('name')?.getError('maxlength') && consultationForm.get('name')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+    <p *ngIf="consultationForm.get('name')?.getError('minlength') && consultationForm.get('name')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+    
+  </div>
+<div  class=" col-md-6">
+  <input maxlength="20" formControlName="phoneNumber" appOnlyNumbers class="form-control col-md-5" type="tel" placeholder="{{'contactUs.phone'|translate}}" id="phone">
+ 
+  <div *ngIf="submitted && consultationForm.controls['phoneNumber'].errors || consultationForm.get('phoneNumber')?.touched">
+    <span *ngIf="consultationForm.get('phoneNumber')?.getError('required')  "
+      class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+  </div>
+  <p *ngIf="consultationForm.get('phoneNumber')?.getError('maxlength') && consultationForm.get('phoneNumber')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+  <p *ngIf="consultationForm.get('phoneNumber')?.getError('minlength') && consultationForm.get('phoneNumber')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+
+</div>
+
+  <div class="col-md-6">
+
+    <input maxlength="100" formControlName="email" class="form-control " type="text" placeholder="{{'contactUs.email'|translate}}">
+    <div *ngIf="submitted && consultationForm.controls['email'].errors || consultationForm.get('email')?.touched">
+      <span *ngIf="consultationForm.get('email')?.getError('required')  "
+        class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+    </div>
+    <p *ngIf="consultationForm.get('email')?.getError('maxlength') && consultationForm.get('email')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+    <p *ngIf="consultationForm.get('email')?.getError('minlength') && consultationForm.get('email')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+  
+  </div>
+  <div class="col-md-6">
+    <div class=" dropdown">
+      <button (click)="onDropdownClick()" class="btn w-100 d-flex justify-content-between dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>  {{ selectedService ? (selectedService | translate): ('consultation.serviceType' | translate) }}  </span>
+  
+   <span> <i class="fa-solid fa-caret-down"></i> </span>
+      </button>
+      <ul  class="dropdown-menu w-100 text-end">
+        <ng-container  *ngFor="let item of items; let i = index">
+          <ng-container *ngFor="let icon of item.icons">
+            <li [class.selected]="consultationForm.get('serviceType')?.value === icon.text" (click)="userService(icon.text)"><a class="dropdown-item" > {{icon.text|translate}}</a></li>
+          </ng-container>
+        </ng-container>
+
+      </ul>
+      <div *ngIf="submitted && consultationForm.controls['serviceType'].errors || consultationForm.get('serviceType')?.touched">
+        <span *ngIf="consultationForm.get('serviceType')?.getError('required')  "
+          class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+      </div>
+    </div>
+
+  </div>
+
+<div class="w-100">
+    <label class="mb-2 txt-200" for="">{{'contactUs.title'|translate}}</label>
+    <textarea maxlength="500" formControlName="message" rows="8" class="form-control" name="" id="" placeholder="{{'contactUs.titlePlaceholder'|translate}}"></textarea>
+    <div *ngIf="submitted && consultationForm.controls['message'].errors || consultationForm.get('message')?.touched">
+      <span *ngIf="consultationForm.get('message')?.getError('required')  "
+        class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+    </div>
+    <p *ngIf="consultationForm.get('message')?.getError('maxlength') && consultationForm.get('message')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+    <p *ngIf="consultationForm.get('message')?.getError('minlength') && consultationForm.get('message')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+  
+</div>
+<a (click)="onSubmit(consultationForm)" type="submit" class="btn btn-blue w-100 py-2">  {{'contactUs.send'|translate}}</a>
+</div>           
+</form>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,137 @@
+<section class="contact-header pt-5">
+    <div class="d-flex flex-column justify-content-center pt-5 align-items-center h-100 gap-2">
+        <nav class="pt-3">
+            <ul class="list-unstyled d-flex gap-2  px-0">
+              <li><a  class="gray-600 text-decoration-none" routerLink="/home"  >{{'footer.home'|translate }}</a></li>
+              <li><img src="../../../assets/img/blogs/arrow-left.svg" alt=""></li>
+              <li class=" text-white">{{'contactUs.contactUs'|translate }}</li>
+            </ul>
+          </nav>
+          <h1 class="text-white fw-semibold">{{'contactUs.contactUs'|translate}}</h1>
+    </div>
+</section>
+
+<section class="contact-main">
+    <div class="container">
+        <div class="row position-relative  gy-5 py-5">
+            <div class="col-md-7">
+                <h2 class="primary-500 fw-semibold">{{'contactUs.contactUs'|translate}}</h2>
+                <p class="txt-400 w-75 ">{{'contactUs.contactDesc'|translate}} </p>
+
+                <div class="d-flex flex-column gap-4 mt-5">
+<div class="d-flex gap-3 ">
+    <div class="square">
+        <img class="img-fluid" src="../../../assets/img/contact-us/sms.svg" alt=""> 
+
+    </div>
+    <div >
+        <h6 class="mb-1 txt-400 fw-semibold" >{{'contactUs.email'|translate}}</h6>
+    <h5 class="txt-500 fw-semibold">info&#64;alhantoushi.com.sa</h5>
+
+    </div>
+</div>
+<div class="d-flex gap-3 ">
+    <div class="square">
+        <img  class="img-fluid"  src="../../../assets/img/contact-us/call.svg" alt=""> 
+
+    </div>
+    <div >
+        <h6 class="mb-1 txt-400 fw-semibold" >{{'contactUs.callUs'|translate}}</h6>
+    <h5 class="txt-500 fw-semibold">
+        0509103165
+    <span style="color: #CCCCCC;">|</span>
+    0542111112
+    </h5>
+
+    </div>
+</div>
+<div class="d-flex gap-3 ">
+    <div class="square">
+        <img  class="img-fluid" src="../../../assets/img/contact-us/location.svg" alt=""> 
+
+    </div>
+    <div >
+        <h6 class="mb-1 txt-400 fw-semibold" >{{'footer.location'|translate}}</h6>
+    <h5 class="txt-500 fw-semibold">ali bin alhassan - Riyadh</h5>
+
+    </div>
+</div>
+<div class="line-border"></div>
+</div>
+<p  class="txt-400 my-3 ">{{'contactUs.stayCall'|translate}}</p>
+<div class="d-flex justify-content-center align-items-center gap-4">
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/instagram logo.svg" alt="">
+            
+    </a>
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/linkedin logo.svg" alt=""> 
+    </a>
+    <a href=""> 
+        <img class="img-fluid" src="../../../assets/img/contact-us/Twitter logo.svg" alt="">
+    </a>
+    <a href=""> 
+        <img  class="img-fluid" src="../../../assets/img/contact-us/facebook logo.svg" alt="">
+
+    </a>
+</div>
+
+            </div>
+            <div class="col-md-5">
+                <form [formGroup]="contactForm"  class="bg-white py-5 px-4 d-flex align-items-center gap-4 flex-column">
+<img class="w-50" src="../../../assets/img/contact-us/Group (11).svg" alt="">
+<div class="row gy-4 px-0">
+    <div class="col-md-6">
+        <input  maxlength="25"  formControlName="fullName" appNoNumbers class="form-control " type="text" placeholder="{{'contactUs.name'|translate}}">
+    
+        <div *ngIf="submitted && contactForm.controls['fullName'].errors || contactForm.get('fullName')?.touched">
+            <span *ngIf="contactForm.get('fullName')?.getError('required')  "
+              class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+          </div>
+          <p *ngIf="contactForm.get('fullName')?.getError('maxlength') && contactForm.get('fullName')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+          <p *ngIf="contactForm.get('fullName')?.getError('minlength') && contactForm.get('fullName')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+          
+    </div>
+    <div class="col-md-6">
+        <input maxlength="20" formControlName="phoneNumber" appOnlyNumbers   placeholder="{{'contactUs.phone'|translate}}" class="form-control w-100" type="tel" name="" id="phone" >
+        <div *ngIf="submitted && contactForm.controls['phoneNumber'].errors || contactForm.get('phoneNumber')?.touched">
+            <span *ngIf="contactForm.get('phoneNumber')?.getError('required')  "
+              class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+          </div>
+          <p *ngIf="contactForm.get('phoneNumber')?.getError('maxlength') && contactForm.get('phoneNumber')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+          <p *ngIf="contactForm.get('phoneNumber')?.getError('minlength') && contactForm.get('phoneNumber')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+        
+
+    </div>
+   
+<div>
+    <input maxlength="100" formControlName="email" class="form-control" type="text" placeholder="{{'contactUs.email'|translate}}">
+    <div *ngIf="submitted && contactForm.controls['email'].errors || contactForm.get('email')?.touched">
+        <span *ngIf="contactForm.get('email')?.getError('required')  "
+          class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+      </div>
+      <p *ngIf="contactForm.get('email')?.getError('maxlength') && contactForm.get('email')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+      <p *ngIf="contactForm.get('email')?.getError('minlength') && contactForm.get('email')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+    
+</div> 
+<div>
+    <label class="mb-2 txt-200" for="">{{'contactUs.title'|translate}}</label>
+    <textarea maxlength="500" formControlName="message" rows="8" class="form-control" name="" id="" placeholder="{{'contactUs.titlePlaceholder'|translate}}"></textarea>
+  
+    <div *ngIf="submitted && contactForm.controls['message'].errors || contactForm.get('message')?.touched">
+        <span *ngIf="contactForm.get('message')?.getError('required')  "
+          class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.required' | translate}}</span>
+      </div>
+      <p *ngIf="contactForm.get('message')?.getError('maxlength') && contactForm.get('message')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.maxLength' | translate}}</p>
+      <p *ngIf="contactForm.get('message')?.getError('minlength') && contactForm.get('message')?.touched"  class="text-danger text-capitalize  my-0 fs-12">{{'contactUs.minLength' | translate}}</p>
+    
+
+</div>
+<a (click)="onSubmit(contactForm)" type="submit" class="btn btn-blue w-100 py-2">  {{'contactUs.send'|translate}}</a>
+</div>
+                </form>
+            </div>
+        </div>
+        <!-- <img class=" position-absolute vector " src="../../../../assets/img/faq/Vector (9).svg" alt=""> -->
+    </div>
+</section>

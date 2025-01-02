@@ -1,0 +1,102 @@
+.consultation-header{
+    background-image:url('../../../assets/img/consultation/book-consult.png');
+    background-position:center;
+    background-size:cover;
+    height:55vh;
+}
+.square{
+    display: flex;
+width: 3rem;
+padding: 3%;
+align-items: center;
+justify-content:center;
+gap: 8px;
+border-radius: 8px;
+background: var(--Colors-Primary-primary-500, #036);
+}
+.line-border{
+    width:90%;
+height: 1.5px;
+background:#D6D6D6;
+}
+form{
+    border-radius: 8px;
+box-shadow: 0px 0px 60px 0px rgba(0, 21, 43, 0.06);
+backdrop-filter: blur(8px);
+}
+input ,textarea{
+    border-radius: 8px;
+border: 1px solid var(--Colors-Gray-gray-200, #E8E8E8);
+background: var(--Colors-Gray-gray-50, #FAFAFA);
+}
+input::placeholder,ul,.dropdown-toggle{
+    color: #8B929A !important;
+    font-size:.8rem !important; 
+}
+.dropdown-item{
+    color: var(--primary-500) !important; 
+}
+textarea::placeholder{
+    color: #8B929A;
+    font-size:.8rem;
+}
+textarea{
+    resize:none;
+}
+.btn-blue{
+    font-size:1rem;
+    color:white;
+    border-radius: 4px;
+background: var(--Colors-Primary-primary-500, #036);
+}
+
+.contact-header ul{
+font-size:var( --font-size-md);
+
+}
+.contact-header h1{
+    font-size:var( --font-size-xxxl);
+    
+    }
+    
+p{
+    font-size:var(--font-size-sm);
+}
+h6{
+    font-size:var(--font-size-xs);
+}
+h5{
+    font-size:var(--font-size-sm);
+}
+label{
+    font-size:var(--font-size-xs);
+}
+.swal2-popup .swal2-title {
+    font-family: 'Cairo';
+    color: #009316 !important;
+}
+@media only screen and (max-width: 768px) {
+    .square{
+    width: 13%;
+    }
+}
+.dropdown-toggle::after{
+display:none !important;
+}
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+    border-color:var(--Colors-Gray-gray-200, #E8E8E8);
+}
+.dropdown-toggle{
+    border-radius: 8px;
+    border: 1px solid var(--Colors-Gray-gray-200, #E8E8E8);
+   background: var(--Colors-Gray-gray-50, #FAFAFA);
+
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+span{
+    font-size:var(--font-size-sm);
+}

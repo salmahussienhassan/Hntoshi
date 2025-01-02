@@ -1,0 +1,16 @@
+.lang-icon{
+    margin-left: 0px;
+    margin-right:15px;
+}
+.accordion-button::after{
+    margin-left:auto;
+    margin-right:unset;
+    }
+
+.chatbot-icon{
+    left:15px;
+    right:unset
+}
+.accordion-button {
+    text-align: left;
+}
